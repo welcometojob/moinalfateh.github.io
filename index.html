@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exclusive Remote Work Opportunities | Global Careers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4361ee;
+            --primary-dark: #3a56d4;
+            --secondary: #3f37c9;
+            --accent: #4895ef;
+            --dark: #212529;
+            --light: #f8f9fa;
+            --success: #4cc9f0;
+            --warning: #f72585;
+            --gray: #6c757d;
+            --light-gray: #e9ecef;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.7;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            margin-bottom: 30px;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-icon {
+            margin-right: 10px;
+            font-size: 32px;
+        }
+        
+        .trust-score {
+            background-color: var(--light-gray);
+            padding: 8px 15px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+        }
+        
+        .trust-score .stars {
+            color: #ffc107;
+            margin-right: 8px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .badge {
+            background: linear-gradient(135deg, var(--warning), #b5179e);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        
+        h1 {
+            font-size: 42px;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            max-width: 800px;
+        }
+        
+        .subheadline {
+            font-size: 20px;
+            color: var(--gray);
+            max-width: 700px;
+            margin-bottom: 40px;
+        }
+        
+        /* Stats */
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            background: white;
+            padding: 20px 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            min-width: 180px;
+        }
+        
+        .stat-number {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: var(--gray);
+            font-weight: 500;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 16px;
+            padding: 50px;
+            margin-bottom: 60px;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before {
+            content: "";
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+        }
+        
+        .cta-section::after {
+            content: "";
+            position: absolute;
+            bottom: -80px;
+            left: -80px;
+            width: 250px;
+            height: 250px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+        }
+        
+        .cta-heading {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .cta-subheading {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: white;
+            color: var(--primary);
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 2;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        
+        .btn-large {
+            font-size: 20px;
+            padding: 20px 50px;
+        }
+        
+        .countdown {
+            margin-top: 30px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .countdown-title {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+        
+        .countdown-timer {
+            font-size: 28px;
+            font-weight: 700;
+            font-family: monospace;
+        }
+        
+        /* Features */
+        .features-section {
+            margin-bottom: 60px;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 50px;
+            color: var(--dark);
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--accent), #4895ef);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: white;
+            font-size: 24px;
+        }
+        
+        .feature-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        .feature-desc {
+            color: var(--gray);
+            font-size: 16px;
+        }
+        
+        /* Testimonials */
+        .testimonials-section {
+            margin-bottom: 60px;
+        }
+        
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: """;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 80px;
+            color: var(--light-gray);
+            font-family: Georgia, serif;
+            line-height: 1;
+            opacity: 0.3;
+        }
+        
+        .testimonial-content {
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--light-gray);
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-weight: 700;
+        }
+        
+        .author-info {
+            flex: 1;
+        }
+        
+        .author-name {
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+        
+        .author-title {
+            font-size: 12px;
+            color: var(--gray);
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px 0;
+            color: var(--gray);
+            font-size: 14px;
+            border-top: 1px solid var(--light-gray);
+        }
+        
+        .disclaimer {
+            max-width: 800px;
+            margin: 0 auto 20px;
+            font-size: 12px;
+            opacity: 0.7;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 32px;
+            }
+            
+            .subheadline {
+                font-size: 18px;
+            }
+            
+            .cta-section {
+                padding: 40px 20px;
+            }
+            
+            .header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .stats {
+                gap: 15px;
+            }
+            
+            .stat-item {
+                min-width: 120px;
+                padding: 15px;
+            }
+            
+            .stat-number {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">🌎</span>
+                <span>GlobalRemoteJobs</span>
+            </div>
+            <div class="trust-score">
+                <span class="stars">★★★★★</span>
+                <span>TrustScore 4.9</span>
+            </div>
+        </header>
+        
+        <main>
+            <section class="hero">
+                <div class="badge">LIMITED TIME OFFER</div>
+                <h1>Exclusive High-Paying Remote Positions Now Available Worldwide</h1>
+                <p class="subheadline">Join thousands earning $400-$1200 weekly from home with flexible hours. No experience required - training provided.</p>
+                
+                <div class="stats">
+                    <div class="stat-item">
+                        <div class="stat-number">10K+</div>
+                        <div class="stat-label">Successful Hires</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">97%</div>
+                        <div class="stat-label">Satisfaction Rate</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">48h</div>
+                        <div class="stat-label">Avg. Placement Time</div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="cta-section">
+                <h2 class="cta-heading">Ready to Start Earning From Home?</h2>
+                <p class="cta-subheading">Positions are filling fast - apply now to secure your spot before the deadline</p>
+                
+                <!-- REPLACE THE # WITH YOUR CPA LINK -->
+                <a href="#" class="btn btn-large">APPLY NOW →</a>
+                
+                <div class="countdown">
+                    <div class="countdown-title">OFFER EXPIRES IN:</div>
+                    <div class="countdown-timer" id="countdown">04:59:32</div>
+                </div>
+            </section>
+            
+            <section class="features-section">
+                <h2 class="section-title">Why Choose Our Opportunities</h2>
+                
+                <div class="features">
+                    <div class="feature-card">
+                        <div class="feature-icon">💼</div>
+                        <h3 class="feature-title">Premium Positions</h3>
+                        <p class="feature-desc">Access to high-paying jobs not advertised elsewhere with top international companies</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">💰</div>
+                        <h3 class="feature-title">Guaranteed Payments</h3>
+                        <p class="feature-desc">Weekly direct deposits to your bank or PayPal with payment protection</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🌐</div>
+                        <h3 class="feature-title">Global Access</h3>
+                        <p class="feature-desc">Available in all countries with localized support in 12 languages</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">⏱️</div>
+                        <h3 class="feature-title">Flexible Schedule</h3>
+                        <p class="feature-desc">Work as little as 15 hours/week or full time - you choose your hours</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🎓</div>
+                        <h3 class="feature-title">Full Training</h3>
+                        <p class="feature-desc">Step-by-step video courses and 24/7 mentor support included</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🛡️</div>
+                        <h3 class="feature-title">Risk-Free</h3>
+                        <p class="feature-desc">100% money-back guarantee if you're not satisfied within 14 days</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="testimonials-section">
+                <h2 class="section-title">Success Stories From Our Members</h2>
+                
+                <div class="testimonials">
+                    <div class="testimonial-card">
+                        <p class="testimonial-content">I was making $200/month at my local job. After signing up here, I got matched with a US company paying $650/week for customer service. Life-changing!</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">S</div>
+                            <div class="author-info">
+                                <div class="author-name">Sarah M.</div>
+                                <div class="author-title">Customer Support Specialist, Nigeria</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <p class="testimonial-content">As a single mom, I needed flexible work. This platform connected me with data entry jobs that pay $22/hour. I can work when my kids are asleep.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">J</div>
+                            <div class="author-info">
+                                <div class="author-name">Juanita R.</div>
+                                <div class="author-title">Data Entry Specialist, Philippines</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <p class="testimonial-content">The training was so easy to follow. Within 3 days I started my first project. Now I average $900/week as a virtual assistant.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">K</div>
+                            <div class="author-info">
+                                <div class="author-name">Kevin T.</div>
+                                <div class="author-title">Executive VA, India</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="cta-section">
+                <h2 class="cta-heading">Don't Miss This Limited Opportunity</h2>
+                <p class="cta-subheading">Only 3 positions remaining for your country at this compensation level</p>
+                
+                <!-- REPLACE THE # WITH YOUR CPA LINK -->
+                <a href="#" class="btn btn-large">CLAIM YOUR SPOT NOW →</a>
+                
+                <div class="countdown">
+                    <div class="countdown-title">FINAL DEADLINE:</div>
+                    <div class="countdown-timer" id="final-countdown">04:58:15</div>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="footer">
+            <p class="disclaimer">This is not a direct employer. This is a promotional job offer site. Results may vary based on individual effort and market conditions.</p>
+            <p>© 2023 GlobalRemoteJobs. All rights reserved.</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Countdown Timer
+        function startCountdown(duration, display) {
+            let timer = duration, hours, minutes, seconds;
+            const interval = setInterval(function () {
+                hours = parseInt(timer / 3600, 10);
+                minutes = parseInt((timer % 3600) / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+                
+                hours = hours < 10 ? "0" + hours : hours;
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+                
+                display.textContent = hours + ":" + minutes + ":" + seconds;
+                
+                if (--timer < 0) {
+                    clearInterval(interval);
+                    display.textContent = "OFFER EXPIRED";
+                    const buttons = document.querySelectorAll('.btn');
+                    buttons.forEach(btn => {
+                        btn.style.opacity = '0.7';
+                        btn.style.cursor = 'not-allowed';
+                        btn.style.pointerEvents = 'none';
+                    });
+                }
+            }, 1000);
+        }
+        
+        window.onload = function () {
+            const fiveHours = 5 * 3600,
+                display = document.getElementById('countdown'),
+                finalDisplay = document.getElementById('final-countdown');
+            
+            startCountdown(fiveHours, display);
+            startCountdown(fiveHours - 45, finalDisplay);
+        };
+    </script>
+</body>
+</html> 
